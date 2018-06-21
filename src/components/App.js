@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Panel from './Panel';
 import Receipt from './Receipt';
-// import ReceiptList from './ReceiptList';
 
 
 const Container = styled.div`
@@ -34,15 +33,6 @@ class App extends Component {
         this.setState({ receipts });
     }
 
-    // addExpense(key, expense) {
-    //     const receipts = {...this.state.receipts};
-    //     if(!(receipts.hasOwnProperty('expenses'))){
-    //         receipts[key].expenses = [];
-    //     }
-    //     receipts[key].expenses.push(expense);
-    //     this.setState({ receipts });
-    // }
-
     render() {
         return (
             <Container className="row flex-center flex-middle">
@@ -72,4 +62,5 @@ export default App;
 // receipt total
 // panel total
 // proptype valid
+// update design
 // deploy

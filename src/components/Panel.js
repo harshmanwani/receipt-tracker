@@ -6,7 +6,6 @@ class Panel extends Component {
         this.props.addReceipt();
     }
     render() {
-        // const { addReceipt } = this.props.addReceipt;
         return (
             <div className="row flex-edges flex-middle">
                 <div className="">

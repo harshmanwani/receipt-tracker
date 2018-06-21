@@ -5,7 +5,6 @@ class Receipt extends Component {
     constructor(props){
         super(props);
         this.newExpense = this.newExpense.bind(this);
-        // this.updateExpense = this.updateExpense.bind(this);
         this.state = {
             expenses: []
         }
@@ -20,11 +19,7 @@ class Receipt extends Component {
             expenses: [...prevState.expenses, expense]
         }))
     }
-    // updateExpense(key, updatedExpense){
-    //     const expenses = {...this.state.expenses};
-    //     expenses[key] = updatedExpense;
-    //     this.setState({ expenses })
-    // }
+    
     render() {
         return (
             <div className="border border-secondary border-4 padding-small">
