@@ -9,3 +9,5 @@ These are the current Targets:
 - Make the Totaling functional and Real-time
 - Fix the design (Me)
 
+![Screenshot](receipt-screenshot.png)
+
