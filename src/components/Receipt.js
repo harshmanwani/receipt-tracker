@@ -27,8 +27,8 @@ class Receipt extends Component {
             sum += this.state.expenses[i].cost;
         }
         this.setState(prevState => ({
-            total: sum.toFixed(2)
-        })) 
+            total: sum
+        }))
     }
     
     render() {

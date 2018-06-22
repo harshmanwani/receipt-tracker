@@ -10,7 +10,7 @@ class Panel extends Component {
             <div className="row flex-edges flex-middle">
                 <div className="">
                     <strong>Total:</strong>
-                    {5+6}
+                    {this.props.total}
                 </div>
                 <div className="">
                     <button value="Add Receipt" className="btn-secondary btn-small" 
