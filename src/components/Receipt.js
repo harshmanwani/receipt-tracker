@@ -5,8 +5,10 @@ class Receipt extends Component {
     constructor(props){
         super(props);
         this.newExpense = this.newExpense.bind(this);
+        this.receiptTotal = this.receiptTotal.bind(this);
         this.state = {
-            expenses: []
+            expenses: [],
+            total: ''
         }
     }
     newExpense(event){
@@ -17,6 +19,15 @@ class Receipt extends Component {
         }
         this.setState(prevState => ({
             expenses: [...prevState.expenses, expense]
+        }))
+    }
+    receiptTotal(){
+        let sum = 0;
+        for (let i = 0; i < this.state.expenses.length; i++) {
+            sum += this.state.expenses[i].cost;
+        }
+        this.setState(prevState => ({
+            total: sum
         }))
     }
     
@@ -33,18 +44,20 @@ class Receipt extends Component {
                 </div>
                 <ul className="list-of-expense">
                     {
-                        this.state.expenses.map((expense, index) => {
+                        this.state.expenses.map((expense, key) => {
                             return (
                                 <Expense 
-                                    key={index} 
-                                    expenseDetails={this.state.expenses}
+                                    key={key}
+                                    index={key} 
+                                    expenseDetails={expense}
+                                    receiptTotal={this.receiptTotal}
                                 />
                             )}
                         )
                     }
                 </ul>
                 <div>
-                    Total: <span>{4+5}</span>
+                    Total: <span>{this.state.total}</span>
                 </div>
             </div>
         )
