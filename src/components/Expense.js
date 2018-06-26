@@ -1,30 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-class Expense extends Component {
-    constructor(props){
-        super(props);
-        this.handleDescChange = this.handleDescChange.bind(this);
-        this.handleCostChange = this.handleCostChange.bind(this);
-    }
-    handleDescChange() {
-        this.props.expenseDetails.desc = this.desc.value;
-    }
-    handleCostChange(){
-        this.props.expenseDetails.cost = this.cost.valueAsNumber;
-        this.props.receiptTotal();
-    }
-    render() {
-        // const details = this.props.expenseDetails;
-        // const index = this.props.index;
-        return (
-            (
-                <div className="form-group row flex-edges padding-small" >
-                    <input type="text" placeholder="Description" ref={(input) => this.desc = input} onChange={this.handleDescChange}></input>
-                    <input type="number" placeholder="Price" ref={(input) => this.cost = input} onChange={this.handleCostChange}></input>
-                </div>
-            )
-        )
-    }
-}
+const Expense = ({ onChangeExpense }) => (
+    <div className="row padding-small">
+        <input
+            type="text"
+            placeholder="Description"
+            className="desc"
+            onChange={e => onChangeExpense('desc', e.target.value)}
+        />
+        <input
+            type="number"
+            placeholder="Price"
+            className="price"
+            onChange={e => onChangeExpense('price', +e.target.value)}
+            />
+        <span className="euro">
+            €
+        </span>
+    </div>
+)
 
-export default Expense;
+export default Expense
