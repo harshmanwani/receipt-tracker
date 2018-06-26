@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+
 
 const Panel = ({ addReceipt, total }) => (
     <div className="row flex-right flex-middle">
@@ -17,5 +19,10 @@ const Panel = ({ addReceipt, total }) => (
         </div>
     </div>
 )
+
+Panel.propTypes = {
+    addReceipt: PropTypes.func.isRequired,
+    total: PropTypes.number
+};
 
 export default Panel

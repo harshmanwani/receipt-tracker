@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const Expense = ({ onChangeExpense }) => (
     <div className="expense row padding-small">
@@ -19,5 +20,9 @@ const Expense = ({ onChangeExpense }) => (
         </span>
     </div>
 )
+
+Expense.propTypes = {
+    onChangeExpense: PropTypes.func.isRequired
+};
 
 export default Expense

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import Expense from './Expense'
 import { getTotalExpenses } from './Helpers'
 
@@ -25,5 +26,12 @@ const Receipt = ({ addExpense, receipt: { expenses }, onChangeExpense }) => (
         </div>
     </div>
 )
+
+Receipt.propTypes = {
+    addExpense: PropTypes.func.isRequired,
+    onChangeExpense: PropTypes.func.isRequired,
+    Receipt: PropTypes.object,
+    expenses: PropTypes.array 
+};
 
 export default Receipt

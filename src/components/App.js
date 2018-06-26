@@ -106,12 +106,3 @@ class App extends Component {
 
 export default App
 
-
-// add receipt button X
-// add expense btn X
-// expense form X
-// receipt total X
-// panel total
-// proptype valid
-// update design
-// deploy
