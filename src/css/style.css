@@ -1,13 +1,33 @@
-
 .border-secondary {
     border: 1px solid #0071DE;
 }
 
-input {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+.receipt {
+    margin-bottom: 15px;
+    padding-bottom: 0.8rem;
+}
+
+.receipt-panel {
+    text-align: right;
+    padding-right: 70px;
+}
+
+.receipt-total {
+    margin-left: 10px;
+    font-size: 1.1em;
+    border-bottom: 3px solid #dc4fffe0;
+}
+
+.app-total {
+    margin-left: 60px;
+    font-size: 1.1em;
+    border-bottom: 3px solid #15e225;
+}
+
+.row {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
+    line-height: 1;
 }
 
 .price {
@@ -15,6 +35,10 @@ input {
     text-align: right;
     margin-left: 20px;
     width: 110px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .desc {

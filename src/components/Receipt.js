@@ -3,7 +3,7 @@ import Expense from './Expense'
 import { getTotalExpenses } from './Helpers'
 
 const Receipt = ({ addExpense, receipt: { expenses }, onChangeExpense }) => (
-    <div className="border border-secondary border-4 padding-small">
+    <div className="receipt border border-secondary border-primary padding-small">
         <div className="row flex-edges">
             <select name="category">
                 <option value="food">Food</option>
@@ -12,15 +12,16 @@ const Receipt = ({ addExpense, receipt: { expenses }, onChangeExpense }) => (
             </select>
             <button className="btn-small" onClick={addExpense}>
                 Add Expense
-      </button>
+            </button>
         </div>
         <ul className="list-of-expense">
             {expenses.map((expense, index) => (
                 <Expense onChangeExpense={onChangeExpense(index)} key={index} />
             ))}
         </ul>
-        <div>
-            Total: <span>{getTotalExpenses(expenses)}</span>
+        <div className="receipt-panel">
+            <span className="">Total : </span>
+            <span className="receipt-total">{getTotalExpenses(expenses)}&nbsp;€</span>
         </div>
     </div>
 )

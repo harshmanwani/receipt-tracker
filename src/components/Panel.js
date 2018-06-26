@@ -1,10 +1,10 @@
 import React from 'react'
 
 const Panel = ({ addReceipt, total }) => (
-    <div className="row flex-edges flex-middle">
-        <div className="">
-            <strong>Total:</strong>
-            {total}
+    <div className="row flex-right flex-middle">
+        <div className="receipt-panel">
+            <span><strong>Total :</strong></span>
+            <span className="app-total">{total}&nbsp;€</span>
         </div>
         <div className="">
             <button

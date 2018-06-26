@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Expense = ({ onChangeExpense }) => (
-    <div className="row padding-small">
+    <div className="expense row padding-small">
         <input
             type="text"
             placeholder="Description"
