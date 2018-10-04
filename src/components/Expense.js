@@ -13,6 +13,8 @@ const Expense = ({ onChangeExpense }) => (
             type="number"
             placeholder="Price"
             className="price"
+            step = "1"
+            default = "0"
             onChange={e => onChangeExpense('price', +e.target.value)}
             />
         <span className="euro">
